@@ -5,11 +5,11 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Address book</title>
+    <title>Pizza</title>
   </head>
   <body>
     <div class="container">
-      <h1>Address book</h1>
+      <h1>Do You Want Some Pizza?</h1>
 
     <!-- <p id="boop">
       Type in your <span>address and name </span> please!
@@ -17,48 +17,43 @@
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a contact:</h2>
-          <form id="new-contact">
+          <h3>Build your own pizza.  All pizza's come with cheese and sauce.  Each topping is $1.  Just choose the toppings you want, press order and you'll receive your order and total.</h3>
+          <form id="pizzaorder">
             <div class="form-group">
-              <label for="new-first-name">First name</label>
-              <input type="text" class="form-control" id="new-first-name">
-            </div>
-            <div class="form-group">
-              <label for="new-last-name">Last name</label>
-              <input type="text" class="form-control" id="new-last-name">
+              <label for="order-name">Name For Order:</label>
+              <input type="text" class="form-control" id="orderName">
             </div>
 
 
-          <div id="new-addresses">
-           <div class="new-address">
-             <div class="form-group address-type">
-               <label>What type of address is this?</label>
-               <select type="select" class="new-type">
-               <option type="address-type">Home</option>
-               <option type="address-type">Work</option>
+
+          <div id="">
+           <div class="new-pizza">
+             <div class="form-group pizza-size">
+               <label>What size would you like?</label>
+               <select type="select" class="size">
+               <option type="small">Small</option>
+               <option type="medium">Medium</option>
+                <option type="large">Large</option>
                </select>
              </div>
-             <div class="form-group">
-               <label for="new-street">Street</label>
-               <input type="text" class="form-control new-street">
+             <div>
+               <label class="checkbox-inline">
+                 <input type="checkbox" id="inlineCheckbox1" value="topping1"> Pepporoni
+               </label>
+               <label class="checkbox-inline">
+                 <input type="checkbox" id="inlineCheckbox2" value="topping2"> Sausage
+               </label>
              </div>
-             <div class="form-group">
-               <label for="new-city">City</label>
-               <input type="text" class="form-control new-city">
-             </div>
-             <div class="form-group">
-               <label for="new-state">State</label>
-               <input type="text" class="form-control new-state">
-             </div>
+
            </div>
          </div>
 
-         <span class="btn btn-primary" id="add-address">Another address</span>
+         <!-- <span class="btn btn-primary" id="add-address">Another address</span> -->
 
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn">Order</button>
           </form>
 
-          <h2>Order:</h2>
+
           <ul id="contacts">
 
           </ul>
@@ -66,13 +61,11 @@
 
         <div class="col-md-6">
           <div id="show-contact">
-            <h2></h2>
+            <h2>Order:</h2>
             <p>First name: <span class="first-name"></span></p>
-            <p>Last name: <span class="last-name"></span></p>
-            <p>Addresses:</p>
-            <ul id="addresses">
-
-            </ul>
+            <p>Size: <span class="last-name"></span></p>
+            <p>Toppings: <span class="toppings"></span></p>
+            <p>Price: $ <span class="price"></span></p>
           </div>
         </div>
 
