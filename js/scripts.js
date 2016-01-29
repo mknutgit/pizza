@@ -1,15 +1,15 @@
-function Contact(firstName,lastName) {
+function Order(firstName, pizza, price) {
   this.firstName = firstName;
-  this.lastName = lastName;
-  this.addresses = [];
+  this.pizza = []
+  this.price = []
 }
-Contact.prototype.fullName = function() {
+Order.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
 
-function Address(type, street, city, state) {
-  this.type = type;
-  this.street = street;
+function Pizza(size, toppings) {
+  this.size = size;
+  this.toppings = street;
   this.city = city;
   this.state = state;
 }
@@ -76,7 +76,7 @@ $(document).ready(function() {
     $("input#new-last-name").val("");
 
     $(".contact").last().click(function() {
-      $("#show-contact").show();
+      $("#show-Order").show();
       $("#show-contact h2").text(newContact.fullName());
       $(".first-name").text(newContact.firstName);
       $(".last-name").text(newContact.lastName);
