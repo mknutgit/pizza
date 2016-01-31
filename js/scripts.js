@@ -1,20 +1,21 @@
-function Pizza (Size, Toppings) {
+function Pizza (Name, Size, Toppings) {
+  this.Name = Name;
   this.Size = Size;
   this.Toppings = Toppings;
   this.Price = 0;
 }
 
-Pizza.prototype.pizzaSizePrice = function() {
-  if (this.Size === 'small') {
+Pizza.prototype.SizePrice = function() {
+  if (this.Size === 'Small') {
     return this.Price += 8;
-  } else if (this.Size === 'medium') {
+  } else if (this.Size === 'Medium') {
     return this.Price += 10;
   } else {
     return this.Price += 12;
   }
 };
 
-Pizza.prototype.pizzaToppingsPrice = function() {
+Pizza.prototype.ToppingsPrice = function() {
   for (var i = 0; i < this.Toppings.length; i++) {
     this.Price += 2;
   }
@@ -26,20 +27,24 @@ $(document).ready(function() {
   $("form#pizzaorder").submit(function(event) {
     event.preventDefault();
 
-
-    var Size = $("form input[name=size]:checked").val();
+    var Name = $("input#orderName").val();
+    var Size = $(".size option:selected").text();
     var Toppings = []
       $("input:checkbox[name=topping]:checked").each(function(){
       Toppings.push($(this).val());
       });
-    var newPizza = new Pizza(Size, Toppings);
+    var newPizza = new Pizza(Name, Size, Toppings);
+    newPizza.SizePrice(Size);
+   newPizza.ToppingsPrice(Toppings);
+
+
 
 
   $('.order').show();
-  $('.name').text(newPizza.Name);
-  $('.size').text(newPizza.Size);
-  $('.toppings').text(newPizza.Toppings);
-  $('.price').text(newPizza.Price);
+  $('.Name').text(newPizza.Name);
+  $('.Size').text(newPizza.Size);
+  $('.Toppings').text(newPizza.Toppings);
+  $('.Price').text(newPizza.Price);
 
 
 
