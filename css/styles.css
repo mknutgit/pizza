@@ -1,13 +1,35 @@
+
+header {
+  width: 100%
+  position: fixed;
+  background-color: green;
+}
+  .content {
+  text-align: center;
+  color: red;
+}
+.jumbotron {
+  height: 300px;
+  color: white;
+  background: url("../Img/Pizza.jpeg") no-repeat center center;
+      -webkit-background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+      -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+}
+
+
+#name {
+  margin-bottom: 20px;
+}
+
+#veggies {
+  margin-bottom: 10px;
+}
+
+#orderDetails {
+  text-align: center;
+}
 .order {
   display: none;
-}
-.contact {
-  cursor: pointer;
-  color: #0088cc;
-}
-.contact:hover {
-  text-decoration: underline;
-}
-.btn :hover {
-  color: purple !important;
 }

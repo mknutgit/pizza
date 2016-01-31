@@ -8,58 +8,78 @@
     <title>Pizza</title>
   </head>
   <body>
+    <div class="header">
+      <div class="content">
+        <h1>Matt's Pizza Shop.  Place your order below.</h1>
+      </div>
+    </div>
+
+    <div id="bg">
+      <div class="jumbotron">
+      </div>
+    </div>
+
     <div class="container">
-      <h1>Do You Want Some Pizza?</h1>
-
-
-          <h3>Build your own pizza.  All pizza's come with cheese and sauce.  Each topping is $1.  Just choose the toppings you want, press order and you'll receive your order and total.</h3>
-          <form id="pizzaorder">
-            <div class="form-group">
-              <label for="order-name">Name For Order:</label>
-              <input type="text" class="form-control" id="orderName">
+      <form id="pizzaorder">
+        <div class="row" id="name">
+          <div class="col col-sm-3">
+            <label for="order-name">Name for order:</label>
+            <input type="text" class="form-control" id="orderName">
+          </div>
+        </div>
+        <div class="new-pizza">
+          <div class="form-group pizza-size">
+            <label>Choose your size (Small $8, Medium $10, Large $12):</label>
+            <select type="select" class="size">
+              <option type="small">Small</option>
+              <option type="medium">Medium</option>
+              <option type="large">Large</option>
+            </select>
+          </div>
+          <h4>Choose your toppings ($2 each):</h4>
+          <h4>Meat</h4>
+          <div class="row">
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Pepperoni">Pepperoni
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Sausage">Sausage
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Bacon">Bacon
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Chicken">Chicken
+              </lable>
             </div>
-           <div class="new-pizza">
-             <div class="form-group pizza-size">
-               <label>What size would you like?</label>
-               <select type="select" class="size">
-               <option type="small">Small</option>
-               <option type="medium">Medium</option>
-                <option type="large">Large</option>
-               </select>
-             </div>
-              <div class="row">
-               <h3>Choose your toppings:</h3>
-               <div class="col col-sm-6">
-                 <input type="checkbox" name="topping" value="pepperoni">pepperoni<br>
-                 <input type="checkbox" name="topping" value="black olives">Sausage<br>
-                 <input type="checkbox" name="topping" value="pepperoncini">bacon<br>
-                 <input type="checkbox" name="topping" value="feta cheese">chicken<br>
-               </div>
-               <div class="col col-sm-6">
-                 <input type="checkbox" name="topping" value="mushrooms">Peppers<br>
-                 <input type="checkbox" name="topping" value="artichoke">Onions<br>
-                 <input type="checkbox" name="topping" value="sundried tomatoes">mushrooms<br>
-                 <input type="checkbox" name="topping" value="jalapenos">tomatos<br>
-               </div>
-             </div>
-             </div>
+            <h4>Veggies</h4>
+            <div class="row" id="veggies">
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Tomatoes">Tomatoes
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Onions">Onions
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Peppers">Peppers
+              </lable>
+              <lable class="checkbox-inline">
+                <input type="checkbox" name="topping" value="Spinach">Spinach
+              </lable>
+            </div>
 
+          <button type="submit" class="btn">Order </button>
+        </div>
 
+        </form>
+      </div>
 
-         <!-- <span class="btn btn-primary" id="add-address">Another address</span> -->
-
-            <button type="submit" class="btn">Order</button>
-          </form>
-
-
-
-          <div class="order">
-         <h3>Hi <span class="Name"></span>, here's your order:</h3>
+        <div class="order" id="orderDetails">
+         <h3>Hi <span class="Name"></span>, here are your order details:</h3>
              <p>Size: <span class="Size"></span></p>
              <p>Toppings: <span class="Toppings"></span></p>
              <p>Price: $<span class="Price"></span>.00</p>
        </div>
 
-     </div>
   </body>
 </html>
